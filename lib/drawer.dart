@@ -103,7 +103,7 @@ class drawer extends StatelessWidget {
             // FloatingActionButton(onPressed: () =>
             // {
             // }),
-            ScreenA(),
+            ScreenA(), // TODO: 에러 고쳐야함
           ],
         ),
       ),
