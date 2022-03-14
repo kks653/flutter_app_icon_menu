@@ -7,15 +7,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Appbar",
-      theme: ThemeData(
-        primarySwatch: Colors.red
-      ),
+      theme: ThemeData(primarySwatch: Colors.red),
       home: MyPage(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
 
 class MyPage extends StatelessWidget {
   @override
@@ -65,22 +62,20 @@ class MyPage extends StatelessWidget {
                 //   backgroundColor: Colors.transparent,
                 // ),
               ],
-
               accountName: Text("ANGRY BIRD"),
               accountEmail: Text("abc123@gmail.com"),
               onDetailsPressed: () {
                 print("Arrow is clicked");
               },
               decoration: BoxDecoration(
-                color: Colors.red,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20.0),
-                  bottomRight: Radius.circular(20.0)
-                )
-              ),
+                  color: Colors.red,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20.0),
+                      bottomRight: Radius.circular(20.0))),
             ),
             ListTile(
-              leading: Icon(Icons.home,
+              leading: Icon(
+                Icons.home,
                 color: Colors.grey[850],
               ),
               title: Text("Home"),
@@ -90,7 +85,8 @@ class MyPage extends StatelessWidget {
               trailing: Icon(Icons.add),
             ),
             ListTile(
-              leading: Icon(Icons.settings,
+              leading: Icon(
+                Icons.settings,
                 color: Colors.grey[850],
               ),
               title: Text("Setting"),
@@ -100,7 +96,8 @@ class MyPage extends StatelessWidget {
               trailing: Icon(Icons.add),
             ),
             ListTile(
-              leading: Icon(Icons.question_answer,
+              leading: Icon(
+                Icons.question_answer,
                 color: Colors.grey[850],
               ),
               title: Text("Q & A"),
@@ -111,6 +108,32 @@ class MyPage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            const aContainer(),
+            const aContainer(),
+
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class aContainer extends StatelessWidget {
+  const aContainer({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.red,
+      width: 100,
+      height: 100,
+      child: Text(
+        "Container",
+        textAlign: TextAlign.center,
       ),
     );
   }
