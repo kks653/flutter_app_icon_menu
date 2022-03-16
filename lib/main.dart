@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Appbar",
       theme: ThemeData(primarySwatch: Colors.red),
-      home: MyPage(),
+      home: FirstPage(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -113,9 +113,10 @@ class MyPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            const aContainer(),
-            const aContainer(),
-
+            // FloatingActionButton(onPressed: () =>
+            // {
+            // }),
+            FirstPage()
           ],
         ),
       ),
@@ -123,8 +124,56 @@ class MyPage extends StatelessWidget {
   }
 }
 
+class FirstPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+            title: Text("First Page")
+        ),
+        body: Center(
+          child: ElevatedButton(
+              onPressed: () {
+                print("Going to Second Page.");
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (ctxt) => SecondPage()
+                ));
+              },
+              child: Text(
+                "Go to Second Page",
+                textAlign: TextAlign.center,
+              )
+          ),
+        )
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Second Page"),
+      ),
+      body: Center(
+          child: ElevatedButton(
+              onPressed: () {
+                print("Going to First Page.");
+                Navigator.pop(context);
+              },
+              child: Text(
+                "Go to First Page",
+                textAlign: TextAlign.center,
+              ))
+      ),
+    );
+  }
+}
+
 class aContainer extends StatelessWidget {
   const aContainer({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
