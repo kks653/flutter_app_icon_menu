@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         '/b' : (_) => ScreenB(),
         '/c' : (_) => ScreenC(),
       },
+      debugShowCheckedModeBanner: false,
     );
   }
 }

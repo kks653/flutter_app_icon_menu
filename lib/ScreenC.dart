@@ -12,8 +12,16 @@ class ScreenC extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              child: Text("Screen C"),
-              onPressed: () {},
+              child: Text("Go to Screen A"),
+              onPressed: () {
+                Navigator.pushNamed(context, '/');
+              },
+            ),
+            ElevatedButton(
+              child: Text("Go to Screen B"),
+              onPressed: () {
+                Navigator.pushNamed(context, '/b');
+              },
             ),
           ],
         ),
