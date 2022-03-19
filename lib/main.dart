@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       //   '/b' : (_) => ScreenB(),
       //   '/c' : (_) => ScreenC(),
       // },
-      home: drawer(),
+      home: drawer(), // drawer가 있는 화면으로 간다.
     );
   }
 }
