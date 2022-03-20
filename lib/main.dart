@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // initialRoute: '/',
-      // routes: {
+      // initialRoute: '/', // 초기 메인 화면
+      // routes: {  // 그 외 라우트들 목록
       //   '/' : (_) => ScreenA(),
       //   '/b' : (_) => ScreenB(),
       //   '/c' : (_) => ScreenC(),
