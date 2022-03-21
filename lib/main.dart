@@ -4,7 +4,7 @@ import 'package:flutter_app_icon_menu/ScreenB.dart';
 import 'package:flutter_app_icon_menu/ScreenC.dart';
 import 'package:flutter_app_icon_menu/drawer.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MyApp()); // Everything starts here.
 
 class MyApp extends StatelessWidget {
   @override
