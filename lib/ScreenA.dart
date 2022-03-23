@@ -14,7 +14,7 @@ class ScreenA extends StatelessWidget {
             ElevatedButton(
               child: Text("Go to Screen B"),
               onPressed: () {
-                Navigator.pushNamed(context, '/b');
+                Navigator.pushNamed(context, '/b'); // context의 위치 중요
               },
             ),
             ElevatedButton(
