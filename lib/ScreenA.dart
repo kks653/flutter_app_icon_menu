@@ -12,7 +12,7 @@ class ScreenA extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              child: Text("Go to Screen B"),
+              child: Text("Go to Screen B"), // 스크린 B 텍스트
               onPressed: () {
                 Navigator.pushNamed(context, '/b'); // context의 위치 중요
               },
